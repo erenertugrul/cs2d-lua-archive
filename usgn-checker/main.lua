@@ -36,7 +36,7 @@ function love.draw( ... )
 			love.graphics.draw(avatar,55,55)
 		end
 		if flag_check == 1 then
-			love.graphics.draw(flag,250,75)
+			love.graphics.draw(flag,250,55)
 		end
 		if flag_check == 0 then
 			love.graphics.draw(flag,250,75)
@@ -53,7 +53,6 @@ function love.draw( ... )
 	
 end
 function love.keypressed(key)
-
 	if key == "backspace" then --https://love2d.org/wiki/love.textinput
         local byteoffset = utf8.offset(text, -1)
  
