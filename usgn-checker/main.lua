@@ -1,4 +1,3 @@
-io.stdout:setvbuf("no") --For console output
 local utf8 = require("utf8")
 require("api")
 first_start = true
