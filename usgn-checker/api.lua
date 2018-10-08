@@ -21,12 +21,17 @@ function api:get_data( usgn_id,data )
 end
 function api:get_flag( usgn_id )
 	local a = api:get_data(usgn_id,"country")
-	if a  ~= "--" then
-		flag = love.graphics.newImage("flags".."/"..(string.upper(a))..".png")
+	if #a ~= 0 then
+		print(a,#a)
+		flag = love.graphics.newImage("flags/"..(string.upper(a))..".png")
 		flag_check = 1
+	else if a ~= "--" then
+		flag = love.graphics.newImage("flags/no_user.png")
+		flag_check = 0
 	else
 		flag = love.graphics.newImage("flags/nocountry.png")
 		flag_check = 0
+	end
 	end
 end
 function api:get_avatar( usgn_id )

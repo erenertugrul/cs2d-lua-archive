@@ -1,3 +1,4 @@
+io.stdout:setvbuf("no") --For console output
 local utf8 = require("utf8")
 require("api")
 first_start = true
@@ -35,7 +36,7 @@ function love.draw( ... )
 			love.graphics.draw(avatar,55,55)
 		end
 		if flag_check == 1 then
-			love.graphics.draw(flag,250,55)
+			love.graphics.draw(flag,250,75)
 		end
 		if flag_check == 0 then
 			love.graphics.draw(flag,250,75)
