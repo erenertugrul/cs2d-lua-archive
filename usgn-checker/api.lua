@@ -22,7 +22,6 @@ end
 function api:get_flag( usgn_id )
 	local a = api:get_data(usgn_id,"country")
 	if #a ~= 0 then
-		print(a,#a)
 		flag = love.graphics.newImage("flags/"..(string.upper(a))..".png")
 		flag_check = 1
 	else if a ~= "--" then
